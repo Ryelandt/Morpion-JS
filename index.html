@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/part07_morpion.css">
+    <link href="bootstrap/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Morpion Ryelandt yohann</title>
+</head>
+<body onload="start()">
+    
+    <nav class="navbar navbar-dark bg-dark text-center">
+        <a href="#" class="navbar-brand">LE MORPION</a>
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Ryelandt Yohann</h1>
+            <p class="lead">Réalisation du jeu "le morpion"</p>
+        </div>
+    </div>
+    <div class="col-lg-12 text-center" id="content0">
+      
+    </div>
+    <div class="col-lg-12 text-center" id="content">
+       
+        <div class="row">
+                
+                <span class="badge badge-pill badge-danger" id="you"></span>
+                <span class="badge badge-pill badge-warning" id="matchD"></span>
+                <span class="badge badge-pill badge-primary" id="IA"></span>
+            
+        </div>
+        <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4"><button class="btn btn-dark" id="bt0"></button></div>
+                <div class="col-lg-4 col-md-4 col-sm-4"><button class="btn btn-dark" id="bt1"></button></div>
+                <div class="col-lg-4 col-md-4 col-sm-4"><button class="btn btn-dark" id="bt2"></button></div>
+        </div>
+        <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4"><button class="btn btn-dark" id="bt3"></button></div>
+                <div class="col-lg-4 col-md-4 col-sm-4"><button class="btn btn-dark" id="bt4"></button></div>
+                <div class="col-lg-4 col-md-4 col-sm-4"><button class="btn btn-dark" id="bt5"></button></div>
+        </div>
+        <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4"><button class="btn btn-dark" id="bt6"></button></div>
+                <div class="col-lg-4 col-md-4 col-sm-4"><button class="btn btn-dark" id="bt7"></button></div>
+                <div class="col-lg-4 col-md-4 col-sm-4"><button class="btn btn-dark" id="bt8"></button></div>
+        </div>
+
+    </div>
+    <footer>
+        <p>2019</p>
+    </footer>
+    <script>
+        window.addEventListener('load',start,false);  // reconnait l'event du bouton cliqué
+        var tabBt = ["bt0","bt1","bt2","bt3","bt4","bt5","bt6","bt7","bt8",];
+        
+        function start(event) { 
+            
+            
+
+            for (let i = 0; i <tabBt.length; i++) {  //crèer un event a chaque bouton
+                var bouton = document.getElementById(tabBt[i]);
+                bouton.addEventListener("click",btClick,false);
+                
+            }
+        }
+        
+    </script>
+    <script src="bootstrap/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src ="js/part07_morpion.js"> </script>
+</body>
+</html>
